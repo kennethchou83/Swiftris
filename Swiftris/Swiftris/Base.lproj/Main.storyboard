@@ -17,9 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5Jq-wg-hg9" appends="YES" id="405-qN-IvW"/>
+                            <outletCollection property="gestureRecognizers" destination="SeZ-1D-bqv" appends="YES" id="AKk-fg-Jcd"/>
+                            <outletCollection property="gestureRecognizers" destination="aUI-fI-GjB" appends="YES" id="8fC-QE-doZ"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5Jq-wg-hg9">
+                    <connections>
+                        <action selector="didTap:" destination="BV1-FR-VrT" id="e8y-DC-G0C"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="MKG-BD-Yj4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SeZ-1D-bqv">
+                    <connections>
+                        <action selector="didPan:" destination="BV1-FR-VrT" id="bcI-wp-UdQ"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="XBh-ko-40i"/>
+                    </connections>
+                </panGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="aUI-fI-GjB">
+                    <connections>
+                        <action selector="didSwipe:" destination="BV1-FR-VrT" id="Dp4-Ay-Gpw"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="W1Z-r9-OO7"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
