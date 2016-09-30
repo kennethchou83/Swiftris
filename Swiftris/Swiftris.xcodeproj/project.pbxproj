@@ -15,6 +15,14 @@
 		462655081D9E24B10041884A /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 462655071D9E24B10041884A /* Sprites.atlas */; };
 		4626550A1D9E28660041884A /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655091D9E28660041884A /* Array2D.swift */; };
 		4626550C1D9E2AE80041884A /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626550B1D9E2AE80041884A /* Block.swift */; };
+		4626550E1D9EED100041884A /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626550D1D9EED100041884A /* Shape.swift */; };
+		462655101D9EEDAB0041884A /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626550F1D9EEDAB0041884A /* SquareShape.swift */; };
+		462655121D9EEDF80041884A /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655111D9EEDF80041884A /* TShape.swift */; };
+		462655141D9EEE080041884A /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655131D9EEE080041884A /* LineShape.swift */; };
+		462655161D9EEE1A0041884A /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655151D9EEE1A0041884A /* SShape.swift */; };
+		462655181D9EEE280041884A /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655171D9EEE280041884A /* ZShape.swift */; };
+		4626551A1D9EEE360041884A /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655191D9EEE360041884A /* LShape.swift */; };
+		4626551C1D9EEE430041884A /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626551B1D9EEE430041884A /* JShape.swift */; };
 		468F2FD61D9DEC8500EAFB44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FD51D9DEC8500EAFB44 /* AppDelegate.swift */; };
 		468F2FDA1D9DEC8500EAFB44 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FD91D9DEC8500EAFB44 /* GameScene.swift */; };
 		468F2FDC1D9DEC8500EAFB44 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FDB1D9DEC8500EAFB44 /* GameViewController.swift */; };
@@ -51,6 +59,14 @@
 		462655071D9E24B10041884A /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		462655091D9E28660041884A /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = ../Array2D.swift; sourceTree = "<group>"; };
 		4626550B1D9E2AE80041884A /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		4626550D1D9EED100041884A /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		4626550F1D9EEDAB0041884A /* SquareShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
+		462655111D9EEDF80041884A /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
+		462655131D9EEE080041884A /* LineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		462655151D9EEE1A0041884A /* SShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
+		462655171D9EEE280041884A /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		462655191D9EEE360041884A /* LShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		4626551B1D9EEE430041884A /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
 		468F2FD21D9DEC8500EAFB44 /* Swiftris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468F2FD51D9DEC8500EAFB44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468F2FD91D9DEC8500EAFB44 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -134,6 +150,14 @@
 				462655091D9E28660041884A /* Array2D.swift */,
 				468F2FDD1D9DEC8500EAFB44 /* Main.storyboard */,
 				4626550B1D9E2AE80041884A /* Block.swift */,
+				4626550D1D9EED100041884A /* Shape.swift */,
+				4626550F1D9EEDAB0041884A /* SquareShape.swift */,
+				462655111D9EEDF80041884A /* TShape.swift */,
+				462655131D9EEE080041884A /* LineShape.swift */,
+				462655151D9EEE1A0041884A /* SShape.swift */,
+				462655171D9EEE280041884A /* ZShape.swift */,
+				462655191D9EEE360041884A /* LShape.swift */,
+				4626551B1D9EEE430041884A /* JShape.swift */,
 				468F2FE01D9DEC8500EAFB44 /* Assets.xcassets */,
 				468F2FE21D9DEC8500EAFB44 /* LaunchScreen.storyboard */,
 				468F2FE51D9DEC8500EAFB44 /* Info.plist */,
@@ -297,10 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462655101D9EEDAB0041884A /* SquareShape.swift in Sources */,
 				468F2FDA1D9DEC8500EAFB44 /* GameScene.swift in Sources */,
+				4626550E1D9EED100041884A /* Shape.swift in Sources */,
 				4626550A1D9E28660041884A /* Array2D.swift in Sources */,
+				462655141D9EEE080041884A /* LineShape.swift in Sources */,
+				462655161D9EEE1A0041884A /* SShape.swift in Sources */,
+				462655121D9EEDF80041884A /* TShape.swift in Sources */,
 				4626550C1D9E2AE80041884A /* Block.swift in Sources */,
+				4626551A1D9EEE360041884A /* LShape.swift in Sources */,
+				462655181D9EEE280041884A /* ZShape.swift in Sources */,
 				468F2FDC1D9DEC8500EAFB44 /* GameViewController.swift in Sources */,
+				4626551C1D9EEE430041884A /* JShape.swift in Sources */,
 				468F2FD61D9DEC8500EAFB44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
