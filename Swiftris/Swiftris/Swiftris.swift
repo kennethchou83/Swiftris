@@ -6,6 +6,8 @@
 //  Copyright © 2016 Kenneth Chou. All rights reserved.
 //
 
+import Foundation
+
 let NumColumns = 10
 let NumRows = 20
 
@@ -38,7 +40,7 @@ protocol SwiftrisDelegate {
     func gameDidLevelUp(swiftris: Swiftris)
 }
 
-class Swiftris {
+@objc class Swiftris : NSObject {
     var blockArray:Array2D<Block>
     var nextShape:Shape?
     var fallingShape:Shape?
@@ -46,13 +48,16 @@ class Swiftris {
     var score = 0
     var level = 1
 
-    init() {
+    override init() {
         fallingShape = nil
         nextShape = nil
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
     }
     
     func beginGame() {
+        score = 0
+        level = 1
+        
         if (nextShape == nil) {
             nextShape = Shape.random(PreviewColumn, startingRow: PreviewRow)
         }

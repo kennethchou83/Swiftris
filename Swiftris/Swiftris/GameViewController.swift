@@ -45,6 +45,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         return true
     }
     
+    @IBAction func home(sender: UIButton) {
+    }
     @IBAction func didTap(sender: UITapGestureRecognizer) {
         swiftris.rotateShape()
 
@@ -123,12 +125,17 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         }
     }
     
-    func gameDidEnd(swiftris: Swiftris) {
+   func gameDidEnd(swiftris: Swiftris) {
         view.userInteractionEnabled = false
         scene.stopTicking()
         
-        scene.playSound("Sounds/gameover.mp3")
-        scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: swiftris.removeAllBlocks()) {
+        // scene.playSound("gameover.mp3")
+    /*
+    scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: swiftris.removeAllBlocks()) {
+            swiftris.beginGame()
+        }
+ */
+        scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: []) {
             swiftris.beginGame()
         }
     }
@@ -140,7 +147,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         } else if scene.tickLengthMillis > 50 {
             scene.tickLengthMillis -= 50
         }
-        scene.playSound("Sounds/levelup.mp3")
+        scene.playSound("levelup.mp3")
     }
     
     func gameShapeDidDrop(swiftris: Swiftris) {
@@ -149,7 +156,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         scene.redrawShape(swiftris.fallingShape!) {
             swiftris.letShapeFall()
         }
-        scene.playSound("Sounds/drop.mp3")
+        scene.playSound("drop.mp3")
     }
     
     func gameShapeDidLand(swiftris: Swiftris) {
@@ -164,7 +171,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
                 // #11
                 self.gameShapeDidLand(swiftris)
             }
-            scene.playSound("Sounds/bomb.mp3")
+            scene.playSound("bomb.mp3")
         } else {
             nextShape()
         }    }

@@ -24,6 +24,7 @@
 		4626551A1D9EEE360041884A /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462655191D9EEE360041884A /* LShape.swift */; };
 		4626551C1D9EEE430041884A /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626551B1D9EEE430041884A /* JShape.swift */; };
 		4626551E1D9EF0070041884A /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626551D1D9EF0070041884A /* Swiftris.swift */; };
+		462655201D9F1E260041884A /* TimeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626551F1D9F1E260041884A /* TimeGameViewController.swift */; };
 		468F2FD61D9DEC8500EAFB44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FD51D9DEC8500EAFB44 /* AppDelegate.swift */; };
 		468F2FDA1D9DEC8500EAFB44 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FD91D9DEC8500EAFB44 /* GameScene.swift */; };
 		468F2FDC1D9DEC8500EAFB44 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FDB1D9DEC8500EAFB44 /* GameViewController.swift */; };
@@ -69,6 +70,7 @@
 		462655191D9EEE360041884A /* LShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
 		4626551B1D9EEE430041884A /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
 		4626551D1D9EF0070041884A /* Swiftris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
+		4626551F1D9F1E260041884A /* TimeGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeGameViewController.swift; sourceTree = "<group>"; };
 		468F2FD21D9DEC8500EAFB44 /* Swiftris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468F2FD51D9DEC8500EAFB44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468F2FD91D9DEC8500EAFB44 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				468F2FD51D9DEC8500EAFB44 /* AppDelegate.swift */,
 				468F2FD91D9DEC8500EAFB44 /* GameScene.swift */,
 				468F2FDB1D9DEC8500EAFB44 /* GameViewController.swift */,
+				4626551F1D9F1E260041884A /* TimeGameViewController.swift */,
 				462655091D9E28660041884A /* Array2D.swift */,
 				4626550B1D9E2AE80041884A /* Block.swift */,
 				4626550D1D9EED100041884A /* Shape.swift */,
@@ -337,6 +340,7 @@
 				462655181D9EEE280041884A /* ZShape.swift in Sources */,
 				468F2FDC1D9DEC8500EAFB44 /* GameViewController.swift in Sources */,
 				4626551C1D9EEE430041884A /* JShape.swift in Sources */,
+				462655201D9F1E260041884A /* TimeGameViewController.swift in Sources */,
 				468F2FD61D9DEC8500EAFB44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
