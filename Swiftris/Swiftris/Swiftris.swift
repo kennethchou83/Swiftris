@@ -127,6 +127,10 @@ protocol SwiftrisDelegate {
     func endGame() {
         score = 0
         level = 1
+        
+        // get rid of shape
+        
+        dropShape()
         delegate?.gameDidEnd(self)
     }
     

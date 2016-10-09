@@ -135,7 +135,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
             swiftris.beginGame()
         }
  */
-        scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: []) {
+        scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: swiftris.removeAllBlocks()) {
             swiftris.beginGame()
         }
     }

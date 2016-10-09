@@ -34,9 +34,9 @@ class TimeGameViewController: GameViewController {
         if let gt = gameEndTimer {
             gt.invalidate()
         }
-        count = 120
+        count = 12
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TimeGameViewController.update), userInfo: nil, repeats: true)
-        gameEndTimer = NSTimer.scheduledTimerWithTimeInterval(Double(count), target: self, selector: #selector(gameDidEnd), userInfo: nil, repeats: false)
+        gameEndTimer = NSTimer.scheduledTimerWithTimeInterval(Double(count), target: self.swiftris, selector: #selector(Swiftris.endGame), userInfo: nil, repeats: false)
     }
     
     override func gameDidEnd(swiftris: Swiftris) {
