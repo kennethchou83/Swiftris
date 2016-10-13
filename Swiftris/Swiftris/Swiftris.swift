@@ -125,9 +125,10 @@ protocol SwiftrisDelegate {
     }
     
     func endGame() {
+        delegate?.gameDidEnd(self)
         score = 0
         level = 1
-        delegate?.gameDidEnd(self)
+        
     }
     
     // #10

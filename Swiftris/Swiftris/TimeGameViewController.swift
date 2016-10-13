@@ -8,8 +8,11 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
-class TimeGameViewController: GameViewController {
+class TimeGameViewController: GameViewController, GKGameCenterControllerDelegate {
+    var score:Int = 0;
+    
     @IBOutlet weak var countDownLabel: UILabel!
     var count : UInt = 0
     var gameTimer : NSTimer?
@@ -20,6 +23,7 @@ class TimeGameViewController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateLocalPlayer()
     }
     
     override func gameDidBegin(swiftris: Swiftris) {
@@ -36,12 +40,40 @@ class TimeGameViewController: GameViewController {
         }
         count = 120
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TimeGameViewController.update), userInfo: nil, repeats: true)
-        gameEndTimer = NSTimer.scheduledTimerWithTimeInterval(Double(count), target: self, selector: #selector(gameDidEnd), userInfo: nil, repeats: false)
+//        gameEndTimer = NSTimer.scheduledTimerWithTimeInterval(Double(count), target: self, selector: #selector(gameDidEnd), userInfo: nil, repeats: false)
     }
     
     override func gameDidEnd(swiftris: Swiftris) {
         NSLog("game ending")
         super.gameDidEnd(swiftris)
+    }
+    
+    @IBAction func showLeaderButton(sender: UIButton) {
+        showleader()
+    }
+    
+    func showleader(){
+        let gcvc = GKGameCenterViewController()
+        gcvc.gameCenterDelegate = self
+        gcvc.viewState = GKGameCenterViewControllerState.Leaderboards
+        gcvc.leaderboardTimeScope = GKLeaderboardTimeScope.AllTime
+        gcvc.leaderboardIdentifier = "Kennethchou83.swiftris"
+        self.presentViewController(gcvc, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController:GKGameCenterViewController){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func authenticateLocalPlayer(){
+        let localPlayer = GKLocalPlayer.localPlayer()
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            if ((viewController) != nil) {
+                self.presentViewController(viewController!, animated: true, completion: nil)
+            }else{
+                print("(GameCenter) Player authenticated: \(GKLocalPlayer.localPlayer().authenticated)")
+            }
+        }
     }
     /*
     func updateCounter() {

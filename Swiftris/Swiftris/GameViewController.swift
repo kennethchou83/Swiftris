@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
 class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {
 
@@ -110,6 +111,22 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         }
     }
     
+    func savehighestscores(){
+        if GKLocalPlayer.localPlayer().authenticated {
+            let gkScore = GKScore(leaderboardIdentifier: "Kennethchou83.swiftris")
+            gkScore.value = Int64(swiftris.score)
+            let scoreArray: [GKScore] = [gkScore]
+            GKScore.reportScores(scoreArray, withCompletionHandler: ( { (error) -> Void in
+                if (error != nil) {
+                    // handle error
+                    print("Error: " + error!.localizedDescription);
+                } else {
+                    print("Score reported: \(gkScore.value)")
+                }
+            }))
+        }
+    }
+
     func gameDidBegin(swiftris: Swiftris) {
         levelLabel.text = "\(swiftris.level)"
         scoreLabel.text = "\(swiftris.score)"
@@ -128,6 +145,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
    func gameDidEnd(swiftris: Swiftris) {
         view.userInteractionEnabled = false
         scene.stopTicking()
+        savehighestscores()
         
         // scene.playSound("gameover.mp3")
     /*
