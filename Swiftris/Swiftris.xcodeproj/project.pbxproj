@@ -33,6 +33,7 @@
 		468F2FE41D9DEC8500EAFB44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468F2FE21D9DEC8500EAFB44 /* LaunchScreen.storyboard */; };
 		468F2FEF1D9DEC8500EAFB44 /* SwiftrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FEE1D9DEC8500EAFB44 /* SwiftrisTests.swift */; };
 		468F2FFA1D9DEC8500EAFB44 /* SwiftrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F2FF91D9DEC8500EAFB44 /* SwiftrisUITests.swift */; };
+		469419BC1DB7002F009905D6 /* GameAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469419BB1DB7002F009905D6 /* GameAchievements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		468F2FF51D9DEC8500EAFB44 /* SwiftrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftrisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468F2FF91D9DEC8500EAFB44 /* SwiftrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftrisUITests.swift; sourceTree = "<group>"; };
 		468F2FFB1D9DEC8500EAFB44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469419BB1DB7002F009905D6 /* GameAchievements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameAchievements.swift; path = ../GameAchievements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				468F2FD91D9DEC8500EAFB44 /* GameScene.swift */,
 				468F2FDB1D9DEC8500EAFB44 /* GameViewController.swift */,
 				4626551F1D9F1E260041884A /* TimeGameViewController.swift */,
+				469419BB1DB7002F009905D6 /* GameAchievements.swift */,
 				462655091D9E28660041884A /* Array2D.swift */,
 				4626550B1D9E2AE80041884A /* Block.swift */,
 				4626550D1D9EED100041884A /* Shape.swift */,
@@ -334,6 +337,7 @@
 				4626551E1D9EF0070041884A /* Swiftris.swift in Sources */,
 				462655141D9EEE080041884A /* LineShape.swift in Sources */,
 				462655161D9EEE1A0041884A /* SShape.swift in Sources */,
+				469419BC1DB7002F009905D6 /* GameAchievements.swift in Sources */,
 				462655121D9EEDF80041884A /* TShape.swift in Sources */,
 				4626550C1D9E2AE80041884A /* Block.swift in Sources */,
 				4626551A1D9EEE360041884A /* LShape.swift in Sources */,

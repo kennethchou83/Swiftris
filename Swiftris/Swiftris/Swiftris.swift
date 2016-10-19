@@ -38,6 +38,9 @@ protocol SwiftrisDelegate {
     
     // Invoked when the game has reached a new level
     func gameDidLevelUp(swiftris: Swiftris)
+    
+    func gameDidBreakBlocks(rowsBroken: Int)
+
 }
 
 @objc class Swiftris : NSObject {
@@ -155,6 +158,9 @@ protocol SwiftrisDelegate {
         if removedLines.count == 0 {
             return ([], [])
         }
+        
+        delegate?.gameDidBreakBlocks(removedLines.count)
+
         // #13
         let pointsEarned = removedLines.count * PointsPerLine * level
         score += pointsEarned

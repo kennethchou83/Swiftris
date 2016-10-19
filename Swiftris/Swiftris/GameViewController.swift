@@ -14,6 +14,10 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
 
     var scene: GameScene!
     var swiftris:Swiftris!
+    var achievements: [GKAchievement] = []
+    
+    var rowsBrokenInGame: Int = 0
+
     // #1
     var panPointReference:CGPoint?
 
@@ -198,9 +202,25 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     func gameShapeDidMove(swiftris: Swiftris) {
         scene.redrawShape(swiftris.fallingShape!) {}
     }
+    
+    func gameDidBreakBlocks(rowsBroken: Int) {
+    
+        for achievement in achievements where achievement.completed != true {
+            achievement.percentComplete += ( 100 * Double(rowsBroken) / Double(GameAchievements().allAchievements[achievement.identifier!]!) )
+        }
+        recordAchievements()
+       
+    }
 }
 
-
+func recordAchievements() {
+    print("Attempting to update achievements: \(achievements)")
+    GKAchievement.reportAchievements(achievements!) { (error) -> Void in
+        if (error != nil) {
+        print("Error updating achievements: \(error?.description)")
+        }
+    }
+}
 
 
 
