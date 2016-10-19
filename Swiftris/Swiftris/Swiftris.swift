@@ -128,9 +128,17 @@ protocol SwiftrisDelegate {
         score = 0
         level = 1
         
-        // get rid of shape
+        // put falling shape blocks into blockArray background
+        /// START HERE
+        guard let shape = fallingShape else {
+            return
+        }
+        for block in shape.blocks {
+            blockArray[block.column, block.row] = block
+        }
+        fallingShape = nil
+        /// END HERE
         
-        dropShape()
         delegate?.gameDidEnd(self)
     }
     
